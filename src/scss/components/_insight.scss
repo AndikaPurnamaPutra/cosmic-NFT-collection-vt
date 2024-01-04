@@ -1,0 +1,120 @@
+.section-insight {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container {
+    &-insight {
+      @include flex(column, center, center);
+      gap: 48px;
+
+      @include responsive(sm) {
+        gap: 34px;
+      }
+
+      .content {
+        // &-top {
+        //   .subtext {
+        //     &-display {}
+        //   }
+        // }
+
+        &-bottom {
+          @include flex(row, null, space-between);
+          gap: 30px;
+
+          @include responsive(sm) {
+            gap: 24px;
+          }
+
+          @include responsive(lg) {
+            @include flex(column, null);
+          }
+
+          .item {
+            @include flex(column, null, null);
+            gap: 32px;
+
+            @include responsive(sm) {
+              gap: 22px;
+            }
+
+            &:nth-child(1) {
+              max-width: 520px;
+
+              @include responsive(lg) {
+                max-width: 100%;
+              }
+            }
+
+            &:nth-child(2) {
+              max-width: 740px;
+
+              @include responsive(lg) {
+                max-width: 100%;
+              }
+            }
+
+            &-image {
+              display: inline-flex;
+              position: relative;
+
+
+              span {
+                color: #0C1016;
+                font-family: $font-display;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 135%;
+                /* 16.2px */
+                letter-spacing: 3.6px;
+                background: rgba(27, 26, 31, 0.16);
+                backdrop-filter: blur(24px);
+                padding: 20px 30px;
+
+                position: absolute;
+                top: 0;
+                left: 0;
+              }
+
+              // img {}
+            }
+
+            &-text {
+              .wrap {
+                @include flex(row, center, space-between);
+
+                .date {
+                  color: #C7C7C7;
+                  font-family: $font-display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 135%;
+                  /* 16.2px */
+                  letter-spacing: 3.6px;
+                }
+
+                .rate {
+                  color: #FFF;
+                  font-family: $font-display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 135%;
+                  /* 16.2px */
+                  letter-spacing: -0.24px;
+                }
+              }
+
+              // &-title {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

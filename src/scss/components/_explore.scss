@@ -1,0 +1,32 @@
+.section-explore {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container {
+    &-explore {
+      .subtext {
+        width: 100%;
+        padding-block: 100px;
+        @include flex(column, center, center);
+        gap: 40px;
+        background-color: $dark-gray;
+        background-image: url(../../../assets/image/cosmic-explore-pattern-mask.svg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        background-position: center;
+
+        @include responsive(sm) {
+          background-size: cover;
+        }
+
+        &-display {
+          max-width: 850px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

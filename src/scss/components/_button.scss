@@ -1,0 +1,107 @@
+.btn {
+  background-color: transparent;
+  border-color: transparent;
+  color: #0C1016;
+  text-align: center;
+  font-family: $font-display;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 135%;
+  letter-spacing: -0.32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms ease;
+  gap: 10px;
+
+  &-primary {
+    color: #0C1016;
+    border-radius: 32px;
+    background-color: $primary;
+    padding: 19px 32px;
+
+    @include responsive(lg) {
+      padding: 12px 28px;
+    }
+
+    &:hover {
+      color: $white;
+      background-color: $dark-gray;
+    }
+  }
+
+  &-link {
+    color: #1B1A1F;
+    gap: 8px;
+    background-color: $primary;
+    padding: 73px 81px;
+
+    @include responsive(xl) {
+      padding: 46px 44px;
+    }
+
+    @include responsive(sm) {
+      padding: 8px 16px;
+    }
+
+    &:hover {
+      background-color: rgba($color: $primary, $alpha: 0.5);
+    }
+
+    img {
+      max-width: 24px;
+    }
+  }
+
+  &-outline {
+    color: $white;
+    border-radius: 50px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      padding: 16px 32px;
+      border: 1px solid #FFFE54;
+    }
+
+    &.active {
+      padding: 16px 32px;
+      border: 1px solid #FFFE54;
+    }
+  }
+
+  &-arrow {
+    background-color: $dark-gray;
+
+    svg {
+      max-width: 32px;
+    }
+  }
+
+  &-back {
+    color: #FFF;
+    font-family: $font-display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 135%;
+    /* 21.6px */
+    letter-spacing: -0.32px;
+
+    transform: rotate(-90deg);
+
+    @include responsive(lg) {
+      transform: rotate(0deg);
+    }
+
+    svg {
+      transform: rotate(90deg);
+
+      @include responsive(lg) {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+}

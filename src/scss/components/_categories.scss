@@ -1,0 +1,83 @@
+.section-categories {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container-fluid {
+    @include flex(column, center, center);
+    gap: 48px;
+
+    .categories {
+
+      &-title {
+        @include responsive(lg) {
+          padding-inline: 20px;
+        }
+      }
+
+      &-slider {
+        @include flex(column, center, center);
+        gap: 30px;
+
+        .slick-track {
+          @include flex(row, center, center);
+          gap: 30px;
+
+          @include responsive(lg) {
+            gap: 24px;
+          }
+        }
+
+        .slider,
+        .slider-rtl {
+          @include flex(row, center, center);
+          gap: 30px;
+          flex-shrink: 0;
+
+          @include responsive(lg) {
+            gap: 24px;
+          }
+
+          .slide {
+            @include flex(row, center, center);
+            gap: 30px;
+            flex-shrink: 0;
+
+            @include responsive(lg) {
+              gap: 24px;
+            }
+
+            &-item {
+              @include flex(row, center, center);
+              gap: 16px;
+              padding: 16px 32px;
+              background-color: $dark-gray;
+              flex-shrink: 0;
+              border-radius: 90px;
+
+              @include responsive(sm) {
+                padding: 14px 28px;
+              }
+
+              &-ic {
+                max-width: 50px;
+
+                @include responsive(xl) {
+                  max-width: 40px;
+                }
+
+                @include responsive(sm) {
+                  max-width: 32px;
+                }
+              }
+
+              // &-text {}
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,175 @@
+.footer {
+  padding-bottom: 50px;
+
+  @include responsive(lg) {
+    padding-block: 24px;
+  }
+
+  .container {
+    @include flex(column, null, null);
+    gap: 50px;
+
+    .content {
+      &-top {
+        @include flex(row, null, space-around);
+        border-bottom: 1px solid rgba($color: #fff, $alpha: 0.2);
+        gap: 52px;
+
+        @include responsive(xl) {
+          gap: 16px;
+        }
+
+        @include responsive(lg) {
+          flex-direction: column;
+          gap: 24px;
+          padding-bottom: 24px;
+        }
+
+        .subtext {
+          &-logo {
+            @include flex(column, flex-start, center);
+            gap: 20px;
+
+            .logo {
+              img {
+                max-width: 126px;
+              }
+            }
+
+            &-subtitle {
+              max-width: 300px;
+            }
+          }
+
+          &-social-media {
+            @include flex(column, flex-start, center);
+            gap: 26px;
+            padding-block: 42px;
+
+            @include responsive(lg) {
+              padding-block: unset;
+            }
+
+            .nav-link {
+              color: #C7C7C7;
+              font-family: $font-display;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 135%;
+              /* 21.6px */
+              letter-spacing: -0.32px;
+              text-transform: uppercase;
+            }
+          }
+
+          &-subscribe {
+            @include flex(column, flex-start, center);
+            gap: 20px;
+
+            // .subscribe {
+            //   &-title {}
+
+            // }
+
+            form {
+              @include flex(row, null, null);
+              border-radius: 50px;
+              border: 1px solid #FFF;
+              border: 1px solid #fff;
+              width: 410px;
+              overflow: hidden;
+
+              @include responsive(lg) {
+                width: 100%;
+              }
+
+              input[type=email] {
+                background-color: transparent;
+                border: none;
+                color: #C7C7C7;
+                font-family: $font-display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 135%;
+                /* 21.6px */
+                letter-spacing: -0.32px;
+                width: 100%;
+                padding: 20px 24px;
+
+                &:focus {
+                  outline: none;
+                }
+              }
+
+              input[type=submit] {
+                background-color: transparent;
+                border: none;
+                color: #FFFE54;
+                font-family: $font-display;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 135%;
+                /* 21.6px */
+                letter-spacing: -0.32px;
+                padding: 20px 24px;
+                border-left: 1px solid $white;
+              }
+            }
+          }
+        }
+
+        .wrap-btn {
+          @include flex(row, center, center);
+
+          @include responsive(lg) {
+            justify-content: flex-end
+          }
+        }
+
+        .border-line {
+          @include responsive(lg) {
+            width: 100%;
+            height: 1px;
+          }
+        }
+      }
+
+      &-bottom {
+        @include flex(row, center, space-between);
+
+        .subtext {
+          &-copyright {
+            color: #C7C7C7;
+            font-family: $font-display;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 135%;
+            /* 21.6px */
+            letter-spacing: -0.32px;
+          }
+
+        }
+
+        .btn {
+          img {
+            max-width: 32px;
+
+            @include responsive(lg) {
+              max-width: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.border-line {
+  content: "";
+  width: 1px;
+  background-color: rgba($color: #fff, $alpha: 0.2);
+}

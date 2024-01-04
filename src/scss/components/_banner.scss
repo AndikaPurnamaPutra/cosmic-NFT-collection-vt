@@ -1,0 +1,62 @@
+.section-banner {
+  background-color: $primary;
+  padding-block: 20px;
+
+  @include responsive(sm) {
+    padding-block: 16px;
+  }
+
+  .container-fluid {
+    justify-content: center;
+
+    .banner {
+      &-slider {
+        @include flex(row, center, center);
+        gap: 30px;
+
+        @include responsive(lg) {
+          gap: 24px;
+        }
+
+        .slick-track {
+          @include flex(row, center, center);
+          gap: 30px;
+
+          @include responsive(lg) {
+            gap: 24px;
+          }
+        }
+
+        .slide {
+          @include flex(row, center, center);
+          gap: 30px;
+          flex-shrink: 0;
+
+          &-item {
+            @include flex(row, center, center);
+            gap: 30px;
+            flex-shrink: 0;
+
+            @include responsive(lg) {
+              gap: 24px;
+            }
+
+            &-text {
+              position: relative;
+              flex-shrink: 0;
+              color: #1B1A1F;
+            }
+
+            &-ic {
+              max-width: 43px;
+
+              @include responsive(lg) {
+                max-width: 38px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

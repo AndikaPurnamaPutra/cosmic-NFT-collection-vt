@@ -1,0 +1,140 @@
+.section-marketplace {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container {
+    &-marketplace {
+      @include flex(column, center, center);
+      gap: 48px;
+
+      @include responsive(sm) {
+        gap: 34px;
+      }
+
+      .content {
+        &-top {
+          .subtext {
+            &-display {
+              max-width: 901px;
+              text-align: center;
+            }
+          }
+        }
+
+        &-bottom {
+          @include flex(column, center, center);
+          gap: 48px;
+
+          @include responsive(sm) {
+            gap: 34px;
+          }
+
+          .wrapper {
+            @include flex(column, null, null);
+            gap: 30px;
+
+            @include responsive(sm) {
+              gap: 24px;
+            }
+          }
+
+          .subtext {
+            &-nav {
+              @include flex(row, center, space-between);
+              flex-wrap: wrap;
+              gap: 30px;
+
+              @include responsive(sm) {
+                gap: 24px;
+              }
+
+              width: 100%;
+
+              @include responsive(lg) {
+                justify-content: center;
+              }
+            }
+
+            &-cards {
+              display: grid;
+              grid-template-columns: repeat(3, auto);
+              gap: 30px;
+
+              @include responsive(sm) {
+                gap: 24px;
+              }
+
+              @include responsive(lg) {
+                grid-template-columns: repeat(2, auto);
+              }
+
+              @include responsive(sm) {
+                grid-template-columns: repeat(1, auto);
+              }
+
+              .card {
+                @include flex(column, null, null);
+
+                &-image {
+                  display: inherit;
+                  position: relative;
+
+                  .btn {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                  }
+                }
+
+                &-body {
+                  position: relative;
+                  padding: 48px 32px 32px 32px;
+                  background-color: $dark-gray;
+
+                  .img-profile {
+                    max-width: 63px;
+                    position: absolute;
+                    left: 31px;
+                    top: -29px;
+                  }
+
+                  &-text {
+                    @include flex(row, null, space-between);
+                    gap: 20px;
+
+                    .text {
+                      &-title {
+                        max-width: 196px;
+                      }
+
+                      &-subtitle {
+                        color: #FFC554;
+                        text-align: right;
+                        font-family: $font-display;
+                        font-size: 28px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 135%;
+                        /* 37.8px */
+                        letter-spacing: -0.56px;
+
+                        @include responsive(xl) {
+                          flex-shrink: 0;
+                          font-size: 22px;
+                        }
+
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

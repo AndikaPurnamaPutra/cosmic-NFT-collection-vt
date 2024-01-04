@@ -1,0 +1,200 @@
+.section-header {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container {
+    &-header {
+      @include flex(column, center, center);
+      gap: 102px;
+
+      @include responsive(lg) {
+        gap: 50px;
+      }
+
+      .content {
+        &-top {
+          .subtext {
+            &-display {
+              max-width: 1140px;
+
+              @include responsive(xl) {
+                max-width: 814px;
+              }
+
+              @include responsive(lg) {
+                max-width: 610px;
+              }
+
+              @include responsive(sm) {
+                max-width: 100%;
+              }
+            }
+          }
+        }
+
+        &-bottom {
+          position: relative;
+
+          .ic-circle {
+            max-width: 185.43px;
+
+            position: absolute;
+            right: 258px;
+            top: -102px;
+
+            @include responsive(xl) {
+              max-width: 140.43px;
+              top: -82px;
+            }
+
+            @include responsive(lg) {
+              display: none;
+            }
+          }
+
+          .subtext-image {
+            position: relative;
+            @include flex(column, null, null);
+
+            @include responsive(lg) {
+              gap: 24px;
+            }
+
+            .profile {
+              position: absolute;
+              top: 20px;
+              right: 20px;
+              @include flex(row, center, null);
+              gap: 8px;
+
+              @include responsive(lg) {
+                position: relative;
+                top: 0;
+                right: 0;
+              }
+
+              .img-profile {
+                max-width: 32px;
+              }
+
+              .name {
+                color: #1B1A1F;
+                font-family: $font-display;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 135%;
+                /* 16.2px */
+
+                @include responsive(lg) {
+                  color: $white;
+                }
+              }
+            }
+
+            .btn-link {
+              position: absolute;
+              left: 0;
+              bottom: 0;
+            }
+
+            .counter {
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              @include flex(row, null, null);
+              gap: 50px;
+
+              background: linear-gradient(97deg, rgba(0, 0, 0, 0.32) 0%, rgba(0, 0, 0, 0.16) 100%);
+              backdrop-filter: blur(24px);
+              padding: 32px 32px 32px 24px;
+
+              @include responsive(xl) {
+                gap: 32px;
+                padding: 24px 24px 24px 16px;
+              }
+
+              @include responsive(lg) {
+                position: relative;
+              }
+
+              @include responsive(sm) {
+                @include flex(column, flex-start, flex-start);
+                gap: 24px;
+              }
+
+              &-text {
+                @include flex(column, null, null);
+                gap: 8px;
+
+                .text {
+                  &-subtitle {
+                    color: #FFF;
+                    font-family: $font-display;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 135%;
+                    /* 21.6px */
+                    letter-spacing: 4.8px;
+
+                    @include responsive(xl) {
+                      font-size: 14px;
+                    }
+                  }
+                }
+
+                .wrapper {
+                  @include flex(row, null, space-between);
+                  gap: 24px;
+                }
+
+                .wrap-text {
+                  .text {
+                    &-title {
+                      color: #FFF;
+                      font-family: $font-display;
+                      font-size: 46px;
+                      font-style: normal;
+                      font-weight: 600;
+                      line-height: 135%;
+                      /* 62.1px */
+                      letter-spacing: -0.92px;
+
+                      @include responsive(xl) {
+                        font-size: 40px;
+                      }
+                    }
+
+                    &-span {
+                      color: #FFF;
+                      font-family: $font-display;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 135%;
+                      /* 18.9px */
+                      letter-spacing: -0.28px;
+
+                      @include responsive(xl) {
+                        font-size: 12px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .img-hero {
+              position: relative;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.section-about {
+  padding-block: 80px;
+
+  @include responsive(lg) {
+    padding-block: 40px;
+  }
+
+  .container {
+    &-about {
+      @include flex(row, center, space-between);
+
+      @include responsive(xl) {
+        gap: 32px;
+      }
+
+      @include responsive(lg) {
+        @include flex(column, flex-start, flex-start);
+      }
+
+      .content {
+        &-left {
+          @include flex(column, null, null);
+          gap: 40px;
+
+          @include responsive(lg) {
+            gap: 24px;
+          }
+
+          @include responsive(sm) {
+            width: 100%;
+          }
+
+          .subtext {
+
+            &-item {
+              @include flex(row, null, null);
+              gap: 80px;
+
+              @include responsive(xl) {
+                @include flex(row, null, space-between);
+                gap: unset;
+              }
+
+              .item {
+                @include flex(column, flex-start, null);
+                gap: 8px;
+
+                &-title {
+                  color: #FFF;
+                  font-family: $font-display;
+                  font-size: 30px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 135%;
+                  /* 40.5px */
+                  letter-spacing: -0.6px;
+
+                  @include responsive(xl) {
+                    font-size: 26px;
+                  }
+
+                  @include responsive(lg) {
+                    font-size: 24px;
+                  }
+
+                  @include responsive(sm) {
+                    font-size: 20px;
+                  }
+                }
+
+                &-subtitle {
+                  color: #C7C7C7;
+                  font-family: $font-display;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 100%;
+                  /* 14px */
+                  letter-spacing: -0.28px;
+                }
+              }
+            }
+          }
+
+
+        }
+
+        &-right {
+          .subtext {
+            &-desc {
+              max-width: 638px;
+
+              @include responsive(sm) {
+                text-align: justify;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
